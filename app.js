@@ -8,9 +8,11 @@ require('dotenv/config');
 app.use(cors())
 app.use(bodyParser.json());
 
-const routePosts = require('./routes/Posts');
+const routeMaps = require('./routes/Temples');
+const routerUser = require('./routes/Users')
 
-app.use('/posts', routePosts);
+app.use('/map', routeMaps);
+app.use('/user', routerUser);
 
 app.get('/',( req, res ) => {
     res.send('hello home');

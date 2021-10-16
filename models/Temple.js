@@ -1,15 +1,27 @@
 const mongoose = require('mongoose');
 
 const PostSchema = mongoose.Schema({
-    title:{
+    name:{
         type: String,
         required:true
     },
     lat:{
-        type: String,
+        type: Number,
         required:true
     },
     lng:{
+        type: Number,
+        required:true
+    },
+    type:{
+        type: String,
+        required:true
+    },
+    address:{
+        type: String,
+        required:true
+    },
+    introduction:{
         type: String,
         required:true
     },
@@ -19,4 +31,4 @@ const PostSchema = mongoose.Schema({
     }
 });
 
-module.exports = mongoose.model('Posts', PostSchema);
+module.exports = mongoose.model('map_temples', PostSchema);
