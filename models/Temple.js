@@ -14,7 +14,7 @@ const PostSchema = mongoose.Schema({
         required:true
     },
     type:{
-        type: String,
+        type: Number,
         required:true
     },
     address:{
