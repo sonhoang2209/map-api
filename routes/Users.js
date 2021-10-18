@@ -40,7 +40,7 @@ router.post('/add' , async (req , res) => {
     }
 });
 
-router.post('/del/:userId' , async (req , res) => {
+router.delete('/del/:userId' , async (req , res) => {
     try{
         const removeUser = await User.remove({_id: req.params.userId})
         res.json(removeUser);
@@ -50,7 +50,7 @@ router.post('/del/:userId' , async (req , res) => {
     }
 });
 
-router.post('/upd/:userId' , async (req , res) => {
+router.patch('/upd/:userId' , async (req , res) => {
     try{
         const updateUser = await User.updateOne(
             {_id: req.params.userId}, 
@@ -64,7 +64,7 @@ router.post('/upd/:userId' , async (req , res) => {
         res.json(updateUser);
     }
     catch( err ) {
-        res.json({message: err});
+        res.json({ message: err });
     }
 });
 
