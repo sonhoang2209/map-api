@@ -60,7 +60,11 @@ router.patch('/upd/:postId' , async (req , res) => {
             { $set: {
                 name:req.body.name ,
                 lat: req.body.lat,
-                lng: req.body.lng
+                lng: req.body.lng,
+                type: req.body.type,
+                address: req.body.address,
+                address: req.body.address,
+                image: req.body.image,
             }} 
         );
         res.json(updatePost);
