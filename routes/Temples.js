@@ -32,6 +32,7 @@ router.post('/add' , async (req , res) => {
         type: req.body.type,
         address: req.body.address,
         introduction: req.body.introduction,
+        image: req.body.image,
     });
 
     try{
