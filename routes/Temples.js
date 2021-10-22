@@ -32,7 +32,6 @@ router.post('/add' , async (req , res) => {
         type: req.body.type,
         address: req.body.address,
         introduction: req.body.introduction,
-        image: req.body.image,
     });
 
     try{
@@ -65,7 +64,6 @@ router.patch('/upd/:postId' , async (req , res) => {
                 type: req.body.type,
                 address: req.body.address,
                 introduction: req.body.introduction,
-                image: req.body.image,
             }} 
         );
         res.json(updatePost);

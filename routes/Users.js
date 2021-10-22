@@ -20,8 +20,6 @@ router.get('/:userId' , async (req , res) => {
     }catch( err ) {
         res.json({message: err});
     }
-    
-
 });
 
 router.post('/add' , async (req , res) => {
