@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const PostSchema = mongoose.Schema({
-    name:{
+    nameTemple:{
         type: String,
         required:true
     },
