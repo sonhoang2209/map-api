@@ -2,7 +2,6 @@ const express = require('express');
 const router = express.Router();
 const Coffee = require('../models/Coffee')
 
-
 router.get('/' , async (req , res) => {
     try{
         const coffees = await Coffee.find();

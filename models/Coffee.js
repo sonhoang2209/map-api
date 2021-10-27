@@ -14,7 +14,7 @@ const PostSchema = mongoose.Schema({
         required:true
     },
     image:{
-        type: Number,
+        type: string,
         required:true
     },
     type:{
