@@ -32,6 +32,7 @@ router.post('/add' , async (req , res) => {
         type: req.body.type,
         address: req.body.address,
         introduction: req.body.introduction,
+        image: req.body.image
     });
 
     try{
@@ -58,12 +59,13 @@ router.patch('/upd/:postId' , async (req , res) => {
         const updatePost = await Post.updateOne(
             {_id: req.params.postId}, 
             { $set: {
-                nameTemple:req.body.nameTemple ,
+                nameTemple: req.body.nameTemple ,
                 lat: req.body.lat,
                 lng: req.body.lng,
                 type: req.body.type,
                 address: req.body.address,
                 introduction: req.body.introduction,
+                image: req.body.image
             }} 
         );
         res.json(updatePost);
