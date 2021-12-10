@@ -44,7 +44,6 @@ router.post('/add' , async (req , res) => {
 });
 
 router.delete('/del/:postId' , async (req , res) => {
-    
     try{
         const removePosts = await Post.remove({_id: req.params.postId})
         res.json(removePosts);
